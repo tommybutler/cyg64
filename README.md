@@ -1,6 +1,6 @@
 # cyg64
 
-For directory-based (offline) cygwin installs with core toolchain including (in addition to default package selections)
+For directory-based (offline) cygwin installs with my core toolchain, including (in addition to default package selections)
   - automake, autoconf, autobuild
   - bc
   - binutils
