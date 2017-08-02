@@ -1,0 +1,65 @@
+shopt -s checkwinsize
+
+
+if [[ ! "$PATH" =~ /usr/local/sbin ]] ; then export PATH=$PATH:/usr/local/sbin ; fi
+if [[ ! "$PATH" =~ /usr/sbin ]]       ; then export PATH=$PATH:/usr/sbin       ; fi
+if [[ ! "$PATH" =~ /sbin ]]           ; then export PATH=$PATH:/sbin           ; fi
+
+export PS1="\n[\[\e[1;37m\]\u\[\e[0m\]@\[\e[1;34m\]\H\[\e[0m\]] [\[\e[1;33m\]\d, \t\[\e[0m\]] [\[\e[1;31m\]\!\[\e[0m\]]\n\[\e[1;31m\]\[\e[0m\][\[\e[1;37m\]\w\[\e[0m\]]\n\[\e[1;37m\]\\$\[\e[0m\] "
+
+export HISTTIMEFORMAT='%F %T '
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='pwd:ls:history:'
+export HISTSIZE=4096
+export EDITOR='/usr/bin/vim'
+export AUTOSSH_POLL=30
+
+{
+   if which dircolors
+   then
+      eval `dircolors`
+   fi
+
+   if ! which putclip
+   then
+      alias putclip="xsel --clipboard"
+   fi
+
+   if ! which getclip
+   then
+      alias getclip="xsel"
+   fi
+} &>/dev/null
+
+alias ls='ls --color=auto'
+alias dir='ls --color=auto --format=vertical'
+alias ll='ls -Al'
+alias la='ls -A'
+alias lh='ls -Alh'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias dateclip='date|putclip'
+alias tsclip='echo -n "$(date +%Y-%m-%d-%H.%M.%S)"|putclip'
+alias tstmp='date +%Y-%m-%d-%H.%M.%S'
+alias procstat="ps -e -o pcpu,pid,cpu,nice,state,cputime,args --sort -pcpu | sed '/^ 0.0 /d'"
+alias apt-get='sudo apt-get'
+alias aptitude='sudo aptitude'
+alias dpkg='sudo dpkg'
+alias whois='whois -H'
+alias chme='sudo chown -R $USER:$USER'
+alias procperuser='ps ax -o user | sort | uniq -c | sort -nr'
+alias vimclean="find . -iname '*sw[po]' -print -delete"
+alias rsynctousb='sudo rsync --recursive --itemize-changes --no-owner --no-group --no-times --ignore-times --partial --modify-window=5'
+alias itemize_changes='rsync --dry-run --archive --itemize-changes --checksum'
+
+# functions
+
+tsbk () { file=$1; if [[ "$file" == '' ]]; then return; fi; cp -v "$file" "${file}-$( tstmp )"; }
+
+# PerlBrew # SEE ALSO .bashrc if perlbrew properly installed!
+if [[ -e ~/perl5/perlbrew/etc/bashrc ]]; then source ~/perl5/perlbrew/etc/bashrc ; fi
+brewoff () { unset PERLBREW_ROOT; unset PERLBREW_HOME; echo 'perlbrew off'; }
+brewon () { source ~/perl5/perlbrew/etc/bashrc; echo 'perlbrew on'; }
+
+if [[ -e ~/.ssh-aliases ]]; then source ~/.ssh-aliases ; fi
