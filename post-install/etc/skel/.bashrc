@@ -196,4 +196,4 @@
 # }
 #
 # alias cd=cd_func
-[[ -e '~/.profile-custom' ]] && source ~/.profile-custom
+[[ -e ~/.profile-custom ]] && source ~/.profile-custom
