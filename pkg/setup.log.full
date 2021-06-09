@@ -1,0 +1,114 @@
+2021/06/09 12:37:30 Starting cygwin install, version 2.908
+2021/06/09 12:37:30 User has backup/restore rights
+2021/06/09 12:37:30 Current Directory: C:\cygwin64\src\pkg
+Could not open service McShield for query, start and stop. McAfee may not be installed, or we don't have access.
+2021/06/09 12:37:32 source: download
+2021/06/09 12:37:34 Selected local directory: C:\cygwin64\src\pkg
+2021/06/09 12:37:36 net: Direct
+Loaded cached mirror list
+User-Agent: default is "Cygwin-Setup/2.908 (Windows NT 6.1.7601;Win64-on-Win32;0409)"
+Request for URL https://cygwin.com/mirrors.lst satisfied from cache
+Fetched URL: https://cygwin.com/mirrors.lst
+2021/06/09 12:37:38 site: https://mirrors.kernel.org/sourceware/cygwin/
+Request for URL https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst.sig satisfied from cache
+Fetched URL: https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst.sig
+Request for URL https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst satisfied from cache
+Fetched URL: https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst
+signature: sig_type 0, pk_alg 17, hash_alg 2
+signature: tried key cygwin, returned 0x0100004f Invalid data
+signature: sig_type 0, pk_alg 1, hash_alg 8
+signature: tried key cygwin, returned 0x00000000 Success
+.ini setup_version is 2.908, our setup_version is 2.908
+INSTALLED.DB version 3
+No source package for 'libclang3.8' 3.8.1-1, source package name 'libclang3.8-src'
+No source package for 'libclang3.9' 3.9.1-1, source package name 'libclang3.9-src'
+No source package for 'libllvm3.8' 3.8.1-1, source package name 'libllvm3.8-src'
+No source package for 'libllvm3.9' 3.9.1-1, source package name 'libllvm3.9-src'
+2021/06/09 12:37:41 solving: 0 tasks, update: yes, use test packages: no
+libsolv: solver started
+libsolv: dosplitprovides=0, noupdateprovide=0, noinfarchcheck=0
+libsolv: allowuninstall=0, allowdowngrade=0, allownamechange=1, allowarchchange=0, allowvendorchange=1
+libsolv: promoteepoch=0, forbidselfconflicts=0
+libsolv: obsoleteusesprovides=0, implicitobsoleteusesprovides=0, obsoleteusescolors=0, implicitobsoleteusescolors=0
+libsolv: dontinstallrecommended=0, addalreadyrecommended=0
+libsolv: number of solvables: 54807, memory used: 2997 K
+libsolv: number of ids: 28055 + 54241
+libsolv: string memory used: 109 K array + 480 K data,  rel memory used: 635 K array
+libsolv: string hash memory: 256 K, rel hash memory : 512 K
+libsolv: provide ids: 11932
+libsolv: provide space needed: 41044 + 108482
+libsolv: shrunk whatprovidesdata from 41044 to 41044
+libsolv: shrunk whatprovidesauxdata from 41044 to 29109
+libsolv: whatprovides memory used: 325 K id array, 584 K data
+libsolv: whatprovidesaux memory used: 109 K id array, 113 K data
+libsolv: WARNING: pool_addfileprovides was not called, this may result in slow operation
+libsolv: lazywhatprovidesq size: 0 entries
+libsolv: createwhatprovides took 0 ms
+libsolv: obsoletes data: 1 entries
+libsolv: added 11648 pkg rules for installed solvables
+libsolv: added 1859 pkg rules for updaters of installed solvables
+libsolv: added 0 pkg rules for packages involved in a job
+libsolv: added 0 pkg rules because of weak dependencies
+libsolv: 2209 of 27715 installable solvables considered for solving
+libsolv: pruned rules from 13508 to 13508
+libsolv:   binary: 4551
+libsolv:   normal: 8956, 45088 literals
+libsolv: pkg rule memory used: 316 K
+libsolv: pkg rule creation took 0 ms
+libsolv: choice rule creation took 0 ms
+libsolv: 13507 pkg rules, 2 * 571 update rules, 0 job rules, 0 infarch rules, 0 dup rules, 0 choice rules, 0 best rules
+libsolv: overall rule memory used: 343 K
+libsolv: solving...
+libsolv: resolving job rules
+libsolv: resolving installed packages
+libsolv: deciding orphaned packages
+libsolv: solver statistics: 0 learned rules, 0 unsolvable, 0 minimization steps
+libsolv: done solving.
+libsolv: solver took 0 ms
+libsolv: final solver statistics: 0 problems, 0 learned rules, 0 unsolvable
+libsolv: solver_solve took 0 ms
+libsolv: 
+libsolv: transaction:
+libsolv:   upgrade   python2-2.7.18-4.any
+libsolv:   (obsoletes
+libsolv:  python2-2.7.18-1.any
+libsolv: )
+libsolv: 
+libsolv: 
+libsolv: orphaned packages:
+libsolv:   base-0.0-0.any (kept)
+libsolv:   _windows-6.1.7601.any (kept)
+libsolv:   libclang3.8-3.8.1-1.any (kept)
+libsolv:   libclang3.9-3.9.1-1.any (kept)
+libsolv:   libllvm3.8-3.8.1-1.any (kept)
+libsolv:   libllvm3.9-3.9.1-1.any (kept)
+libsolv: 
+libsolv: ordering transaction
+libsolv: transaction elements: 1
+libsolv: edges: 0, edge space: 0
+libsolv: edge creation took 0 ms
+libsolv: cycles broken: 0
+libsolv: cycle breaking took 0 ms
+libsolv: cycle edge creation took 0 ms
+libsolv: invedge space: 3
+libsolv: creating new transaction took 0 ms
+libsolv: transaction ordering took 0 ms
+libsolv: 1 upgraded packages:
+libsolv:   - python2-2.7.18-1.any -> python2-2.7.18-4.any
+libsolv: 
+2021/06/09 12:37:49 site: https://mirrors.kernel.org/sourceware/cygwin/
+Request for URL https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst.sig satisfied from cache
+Fetched URL: https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst.sig
+Request for URL https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst satisfied from cache
+Fetched URL: https://mirrors.kernel.org/sourceware/cygwin/x86_64/setup.zst
+signature: sig_type 0, pk_alg 17, hash_alg 2
+signature: tried key cygwin, returned 0x0100004f Invalid data
+signature: sig_type 0, pk_alg 1, hash_alg 8
+signature: tried key cygwin, returned 0x00000000 Success
+.ini setup_version is 2.908, our setup_version is 2.908
+INSTALLED.DB version 3
+No source package for 'libclang3.8' 3.8.1-1, source package name 'libclang3.8-src'
+No source package for 'libclang3.9' 3.9.1-1, source package name 'libclang3.9-src'
+No source package for 'libllvm3.8' 3.8.1-1, source package name 'libllvm3.8-src'
+No source package for 'libllvm3.9' 3.9.1-1, source package name 'libllvm3.9-src'
+2021/06/09 12:37:54 Ending cygwin install
